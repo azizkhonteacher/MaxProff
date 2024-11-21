@@ -1,0 +1,86 @@
+header {
+  background: #fff;
+
+  .header-top {
+    padding: 23px 0;
+    .container {
+      display: flex;
+      align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+      @extend %fcc;
+      width: 126px;
+      height: 44px;
+      flex-shrink: 0;
+      img,
+      svg {
+        @extend %fcc;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__category {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      margin-left: 47px;
+      margin-right: 46px;
+    }
+    &__category-link {
+      color: $title;
+      @include font(400, 16px, 1.2);
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $checkColor;
+      }
+    }
+    &__weekday {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+      flex-shrink: 0;
+      li a {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+        color: $title;
+        @include font(700, 18, 1.2);
+      }
+      li p {
+        color: $title;
+        @include font(400, 14px, 1.2);
+      }
+    }
+    &__getPhone {
+      @extend %fcc;
+      flex-shrink: 0;
+      margin-left: 33px;
+      a {
+        @extend %fcc;
+        text-align: center;
+        padding: 13px 24px 13px 22px;
+        border: 1px solid $prColor;
+        border-radius: 3px;
+        color: $prColor;
+        @include font(500, 16px, 1.2);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: $prColor;
+          color: #fff;
+        }
+      }
+    }
+    &__messengers{
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        display: none;
+    }
+  }
+}

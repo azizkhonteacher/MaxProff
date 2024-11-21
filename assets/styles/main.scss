@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./defoultStyles/typograph";
+@import "./defoultStyles/varibles";
+@import "./defoultStyles/mixin";
+@import "./defoultStyles/extent";
+@import "./defoultStyles/reset";
+
+// pages
+@import "./pagesStyles/index";
+// class's
+@import "./defoultStyles/class";
