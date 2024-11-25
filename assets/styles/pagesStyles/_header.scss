@@ -6,7 +6,8 @@ header {
     .container {
       display: flex;
       align-items: center;
-        justify-content: space-between;
+      justify-content: space-between;
+      width: 100%;
     }
     .logo {
       @extend %fcc;
@@ -25,7 +26,7 @@ header {
       display: flex;
       align-items: center;
       gap: 24px;
-      width: 100%;
+      // width: 100%;
       margin-left: 47px;
       margin-right: 46px;
     }
@@ -76,11 +77,11 @@ header {
         }
       }
     }
-    &__messengers{
-        display: flex;
-        align-items: center;
-        gap: 17px;
-        display: none;
+    &__messengers {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      display: none;
     }
   }
 }
