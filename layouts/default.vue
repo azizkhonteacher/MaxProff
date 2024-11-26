@@ -10,7 +10,14 @@
           </div>
 
           <ul class="header-top__category">
-            <li><a href="#" style="color: #2D4872;" class="header-top__category-link">Цены </a></li>
+            <li>
+              <a
+                href="#"
+                style="color: #2d4872"
+                class="header-top__category-link"
+                >Цены
+              </a>
+            </li>
             <li><a href="#" class="header-top__category-link">Услуги</a></li>
             <li><a href="#" class="header-top__category-link">Портфолио</a></li>
             <li><a href="#" class="header-top__category-link">Акции</a></li>
@@ -33,7 +40,7 @@
             </li>
           </ul>
 
-          <ul class="header-top__messengers" >
+          <ul class="header-top__messengers">
             <li>
               <a href="#">
                 <img
@@ -62,15 +69,75 @@
 
           <div class="header-top__getPhone">
             <a href="tel +72332222222">
-                <callPhoneSvgVue v-if="false"/>
-                Заказать звонок
+              <callPhoneSvgVue v-if="false" />
+              Заказать звонок
             </a>
           </div>
         </div>
       </div>
 
       <div class="header-bottom">
-        <ul class="header-bottom__category"></ul>
+        <div class="container">
+          <ul class="header-bottom__category-list">
+            <!-- list-1 -->
+            <li class="header-bottom__category">
+              <div class="header-bottom__category-title">
+                <p>Ремонт квартир</p>
+                <chevronDownSvg />
+              </div>
+
+              <ul>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </li>
+            <!-- list-2 -->
+            <li class="header-bottom__category">
+              <div class="header-bottom__category-title">
+                <p>Ремонт квартир</p>
+                <chevronDownSvg />
+              </div>
+
+              <ul>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </li>
+            <!-- list-3 -->
+            <li class="header-bottom__category">
+              <div class="header-bottom__category-title">
+                <p>Ремонт квартир</p>
+                <chevronDownSvg />
+              </div>
+
+              <ul>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Подпункт</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </li>
+            <!-- list-4 -->
+            <li class="header-bottom__category">
+              <div class="header-bottom__category-title">
+                <a href="#">Ремонт квартир</a>
+              </div>
+            </li>
+            <!-- list-5 -->
+            <li class="header-bottom__category">
+              <div class="header-bottom__category-title">
+                <a href="#">Ремонт квартир</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -82,6 +149,7 @@
 // import icon's
 import logoSvg from "~/component/icon/logo.vue";
 import callPhoneSvgVue from "~/component/icon/callPhoneSvg.vue";
+import chevronDownSvg from "~/component/icon/chevronDownSvg.vue";
 </script>
 
 <style lang="scss" scoped></style>
