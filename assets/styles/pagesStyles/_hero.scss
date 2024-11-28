@@ -1,0 +1,309 @@
+.hero {
+  background: url("~/assets/images/png/hero_banner.png") center/cover no-repeat;
+  margin-top: 33px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, #fff 20%, transparent);
+  }
+  .container {
+    position: relative;
+  }
+  &__info-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px 0 150px;
+    max-width: 563px;
+  }
+  &__info-title {
+    max-width: 563px;
+    color: $title;
+    @include font(700, 60px, 1.2);
+    z-index: 1;
+  }
+  &__info-sub-title {
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    color: $title;
+    @include font(700, 44px, 1.15);
+    margin: 31px 0 68px;
+    span {
+      @include font(700, 60px, 1.2);
+      background: $prColor;
+      color: #fff;
+      border-radius: 10px;
+      margin: 0 5px;
+    }
+  }
+  .convenience-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+    column-gap: 50px;
+    padding-right: 125px;
+    z-index: 1;
+  }
+  .convenience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+
+    &__img {
+      @extend %fcc;
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      position: relative;
+
+      span {
+        position: absolute;
+        @extend %fcc;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #6cac3d99;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    p {
+      color: $title;
+      @include font(700, 18px, 1.2);
+    }
+
+    &:nth-child(1) {
+      span {
+        top: 0;
+        right: 4px;
+      }
+    }
+    &:nth-child(3) {
+      span {
+        bottom: -4px;
+        left: 50%;
+        translate: -50%;
+      }
+    }
+    &:nth-child(2) {
+      span {
+        bottom: 0;
+        left: 50%;
+        translate: -50%;
+      }
+    }
+    &:nth-child(4) {
+      span {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+  .repair__calculate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 38px 0 42px;
+    border-radius: 7px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    &-title {
+      color: $title;
+      @include font(900, 20px, 1.2);
+      padding-right: 24px;
+      padding-left: 53px;
+      text-transform: uppercase;
+    }
+  }
+
+  .repair__calculate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+
+    &-check-inputs {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: start;
+      width: 100%;
+      gap: 18px;
+      padding-left: 53px;
+    }
+
+    &-item {
+      gap: 20px;
+      width: 100%;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #d6d6d6;
+
+      input[type="radio"] {
+        appearance: none; // Brauzerning default dizaynini o'chirish
+        -webkit-appearance: none; // Safari uchun
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+
+        width: 18px;
+        height: 18px;
+        background-color: #f2f2f2;
+        border: 2px solid #cccccc;
+
+        &:checked {
+          border-color: $checkColor; // Tanlangan radio border rangi
+        }
+        &:checked::after {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: $checkColor; // Ichki doira foni
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:checked + label {
+          color: $checkColor;
+        }
+      }
+      label {
+        color: $prtitle;
+        @include font(400, 14px, 1.2);
+        cursor: pointer;
+      }
+      .title {
+        color: $prtitle;
+        @include font(700, 16px, 1.2);
+      }
+    }
+    .range {
+      gap: 13px;
+      padding: 0;
+      border: none;
+      input[type="range"] {
+        // -webkit-appearance: none;
+        width: 320px;
+        height: 6px;
+        background: #f2f2f2;
+        border-radius: 3px;
+        outline: none;
+        accent-color: $checkColor !important;
+      }
+      /* Slayder "thumb" (harakatlanuvchi doira) uchun */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 26px;
+        height: 26px;
+        background: $checkColor;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      /* Firefox uchun */
+      input[type="range"]::-moz-range-thumb {
+        width: 26px;
+        height: 26px;
+        background: $checkColor;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .repair__calculate-discount-wrap {
+    width: 100%;
+    padding-left: 5px;
+    padding: 24px 0 19px 5px;
+    .repair__calculate-discount {
+      background: #f2f2f2;
+      padding: 17px 0 18px 55px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1px;
+        p {
+          color: $checkColor;
+          @include font(400, 16px, 1.2);
+        }
+        h2 {
+          color: $checkColor;
+          @include font(700, 18px, 1.2);
+        }
+      }
+    }
+  }
+
+  .repair__calculate-enter-phone {
+    padding: 0 55px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 17px;
+
+    .title {
+      color: $prtitle;
+      @include font(700, 16px, 1.2);
+    }
+    .inputs {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      input[type="number"] {
+        border: 1px solid #ccc;
+        padding: 12px 13px;
+        color: $prtitle;
+        @include font(400, 14px, 1.2);
+        outline: none;
+
+        -moz-appearance: textfield;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      button{
+        @extend %fcc;
+        color: #fff;
+        background: $prColor;
+        @include font(700, 18px, 1.2);
+        border-radius: 4px;
+        padding: 13px 23px 14px 31px;
+        transition: all .3s ease-in-out;
+        border: 1px solid $prColor;
+        &:hover{
+          color: $prColor;
+          background: #fff;
+          border-color: $prColor;
+        }
+      }
+    }
+  }
+}

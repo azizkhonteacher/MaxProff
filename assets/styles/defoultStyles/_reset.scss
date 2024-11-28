@@ -18,3 +18,9 @@ body {
   max-width: 1240px;
   width: 100%;
 }
+button{
+  outline: none;
+  &:active{
+    opacity: 0.8;
+  }
+}
