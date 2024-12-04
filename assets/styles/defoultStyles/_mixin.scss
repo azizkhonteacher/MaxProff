@@ -1,4 +1,4 @@
-@mixin font($fw, $fz, $lh: 1) {
+@mixin font($fw, $fz, $lh: 1.2) {
   font-family: $siteFont;
   font-weight: $fw;
   font-size: $fz;

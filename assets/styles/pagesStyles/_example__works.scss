@@ -1,0 +1,12 @@
+.example__works {
+  background: #f8f8f8;
+  padding: 56px 0 60px;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  &-title {
+    @extend %sectionTitles;
+    margin-bottom: 70px;
+  }
+}

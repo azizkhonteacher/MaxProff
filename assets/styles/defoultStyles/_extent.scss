@@ -1,5 +1,36 @@
-%fcc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+%fcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%sectionTitles {
+  color: $title;
+  @include font(700, 42px, 1.2);
+  text-align: center;
+}
+
+%hoverBtn {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid $prColor;
+  background: $prColor;
+  color: #fff;
+  border-radius: 4px;
+
+  &:hover {
+    color: $prColor;
+    background: #fff;
+  }
+}
+%hoverBtn2 {
+  transition: all 0.3s ease-in-out;
+  border: 2px solid $prColor;
+  border-radius: 4px;
+  background: #fff;
+  color: $prColor;
+
+  &:hover{
+    background: $prColor;
+    color: #fff;
+  }
 }
