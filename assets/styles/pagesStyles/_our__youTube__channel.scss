@@ -1,0 +1,35 @@
+.our__youTube__channel {
+  padding: 71px 0 88px;
+  background: #fff;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  &-title {
+    @extend %sectionTitles;
+    text-align: center;
+    @extend %fcc;
+    width: 100%;
+  }
+  &-wrapper {
+    gap: 19px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 49px;
+    // align-content: center;
+  }
+  &-item {
+    @extend %fcc;
+    width: 100%;
+    height: 226px;
+
+    iframe,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

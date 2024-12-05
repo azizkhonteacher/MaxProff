@@ -225,7 +225,7 @@
 
         <div class="repair__prices-wrapper">
           <!-- card.s -->
-          <repairPricesCard v-for="i in 5" :key="i" />
+          <repairPricesCard v-for="i in 4" :key="i" />
         </div>
       </div>
     </div>
@@ -491,18 +491,107 @@
       </div>
     </div>
 
-    <!-- Reviews -->
-     <div class="reviews">
+    <!-- Reviews  -->
+    <!-- media da o'zgaradigan joyi bor -->
+    <div class="reviews">
       <div class="container">
         <h2 class="reviews-title">Отзывы</h2>
+
+        <!-- asosiy deskropda ko'rinadigan qismi -->
+
+        <div class="reviews-video-wrapper">
+          <div class="reviews-video-item" v-for="i in 4" :key="i">
+            <div class="reviews-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/niLf7eQRZnY?si=ClCGdBj5jgEvYq3i"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- work information -->
+            <div class="reviews-video-info">
+              <div class="reviews-video-title">
+                <h2>Капитальный ремонт</h2>
+                <p>2х-комнтаная квартира</p>
+              </div>
+              <div class="reviews-video-location">
+                <locationSvg />
+                <p>Москва, р-н Фили-Давыдково, Малая Филевская улица, 68</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
+    </div>
+
+    <!-- Our you-tube channel videos -->
+    <!-- media da o'zgaradigan joyi bor -->
+    <div class="our__youTube__channel">
+      <div class="container">
+        <h2 class="our__youTube__channel-title">Наш you-tube канал</h2>
+
+        <!-- ----------- -->
+        <div class="our__youTube__channel-wrapper">
+          <!-- eng kichik mediagacha -->
+          <div class="our__youTube__channel-item" v-for="i in 6" :key="i">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/niLf7eQRZnY?si=ClCGdBj5jgEvYq3i"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!-- ----------- -->
+      </div>
+    </div>
+
+    <!-- brand's -->
+    <div class="brand">
+      <div class="container">
+        <div class="brand-title">
+          <h2>Только лучшие поставщики</h2>
+          <p>
+            В нашей работе мы используем самые качественные и проверенные годами
+            материалы
+          </p>
+        </div>
+
+        <div class="brand-wrap">
+          <div class="comment">
+            <div class="comment-info">
+              <div class="desc">
+                <p>
+                  Получите бесплатный сертификат на чистовые материалы
+                  номиналом:
+                </p>
+              </div>
+              <div class="price">
+                <h2>30 000</h2>
+                <p>руб.</p>
+              </div>
+            </div>
+            <button>Оставить заявку</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 // import's
 import repairPricesCard from "~/component/repairPricesCard.vue";
+import locationSvg from "~/component/icon/locationSvg.vue";
 // varibles
 const repair_range = ref(35);
 </script>
